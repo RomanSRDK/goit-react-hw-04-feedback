@@ -1,0 +1,11 @@
+.item {
+    font-size: 28px;
+    font-weight: 600;
+    list-style: none;
+    color: #7EBE41;
+}
+.list {
+    display: block;
+    margin: 0 auto;
+    list-style: none;
+}
