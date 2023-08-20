@@ -1,16 +1,17 @@
 import PropTypes from 'prop-types';
 import styles from '../FeedBacks/Feedbacks.module.css';
 
-const Feedbacks = ({ options, onLeaveFeedback }) => {
+const Feedbacks = ({ options, buttonIncrement }) => {
     return (<div className={styles.container}>
         {options.map((feedback, index) => {
-            return (<button className={styles.button} type='button' key={index} name={feedback} onClick={onLeaveFeedback}>{feedback}</button>)
+            return (<button className={styles.button} type='button' key={index} name={feedback} onClick={buttonIncrement}>{feedback}</button>)
         })}
 
     </div>);
 };
+
 Feedbacks.propTypes = {
-    onLeaveFeedback: PropTypes.func.isRequired,
+    buttonIncrement: PropTypes.func.isRequired,
     options: PropTypes.arrayOf(PropTypes.string.isRequired),
    
 }
